@@ -1,0 +1,41 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="VRU_smartphone_app.Views.Locations_Page"
+             xmlns:map="clr-namespace:Xamarin.Forms.Maps;assembly=Xamarin.Forms.Maps"
+             xmlns:vm="clr-namespace:VRU_smartphone_app.ViewModels"
+             x:Name="BrowseItemsPage"
+             Title="User Location">
+    
+    <ContentPage.BindingContext>
+        <vm:Locations_ViewModel x:Name="Locations_VM"/>
+    </ContentPage.BindingContext>
+    
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="85"/>
+        </Grid.RowDefinitions>
+        <map:Map x:Name="GMap" Grid.Row="0" Grid.Column="0" Margin="0,0,0,0" HasZoomEnabled="True" HasScrollEnabled="True">
+        </map:Map>
+        <Frame x:Name="StatusFrame" Grid.Row="1" Grid.Column="0" BackgroundColor="DodgerBlue" Padding="0" CornerRadius="10" Margin="10,5,10,10">
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                </Grid.RowDefinitions>
+                <StackLayout Grid.Row="0" Grid.Column="0" Orientation="Horizontal">
+                    <Label Text="Coordinates: " FontSize="Large" Padding="10,0,0,0"/>
+                    <Label Text="{Binding Latitude}" FontSize="Large" Padding="0"/>
+                    <Label Text="," FontSize="Large" Padding="0"/>
+                    <Label Text="{Binding Longitude}" FontSize="Large" Padding="0"/>
+                </StackLayout>
+                <StackLayout Grid.Row="1" Grid.Column="0" Orientation="Horizontal">
+                    <Label Text="Speed: " FontSize="Large" Padding="10,0,0,0"/>
+                    <Label Text="{Binding Speed}" FontSize="Large" Padding="0"/>
+                    <Label Text="mph" FontSize="Large" Padding="0"/>
+                </StackLayout>
+            </Grid>
+        </Frame>
+    </Grid>
+</ContentPage>

@@ -1,0 +1,186 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<TabbedPage  xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:vm="clr-namespace:VRU_smartphone_app.ViewModels"
+             x:Class="VRU_smartphone_app.Views.Info"
+             Title="User Information">
+
+    <TabbedPage.BindingContext>
+        <vm:Info_ViewModel x:Name="Info_VM"/>
+    </TabbedPage.BindingContext>
+
+    <ContentPage  Title="Info">
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="155"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+            </Grid.RowDefinitions>
+            <Grid.Resources>
+                <Style x:Key="Label_Text" TargetType="Label">
+                    <Setter Property="Padding" Value="0,0,0,0"/>
+                    <Setter Property="HorizontalTextAlignment" Value="End"/>
+                    <Setter Property="Margin" Value="0,0,0,0"/>
+                    <Setter Property="FontSize" Value="Medium"/>
+                </Style>
+                <Style x:Key="Label_Data" TargetType="Label">
+                    <Setter Property="Padding" Value="0,0,0,0"/>
+                    <Setter Property="HorizontalTextAlignment" Value="Start"/>
+                    <Setter Property="VerticalTextAlignment" Value="Center"/>
+                    <Setter Property="Margin" Value="0,0,0,0"/>
+                    <Setter Property="FontSize" Value="Medium"/>
+                </Style>
+            </Grid.Resources>
+
+            <Label Grid.Column="0" Grid.Row="0" Style="{StaticResource Label_Text}" Text="ID:"/>
+            <Label Grid.Column="1" Grid.Row="0" Style="{StaticResource Label_Data}" Text="{Binding ID}"/>
+
+            <Label Grid.Column="0" Grid.Row="1" Style="{StaticResource Label_Text}" Text="Name:"/>
+            <Label Grid.Column="1" Grid.Row="1" Style="{StaticResource Label_Data}" Text="{Binding Name}"/>
+
+            <Label Grid.Column="0" Grid.Row="2" Style="{StaticResource Label_Text}" Text="Vehicle:"/>
+            <Label Grid.Column="1" Grid.Row="2" Style="{StaticResource Label_Data}" Text="{Binding Vehicle}"/>
+
+            <Label Grid.Column="0" Grid.Row="3" Style="{StaticResource Label_Text}" Text="License Plate:"/>
+            <Label Grid.Column="1" Grid.Row="3" Style="{StaticResource Label_Data}" Text="{Binding License_Plate}"/>
+
+            <Label Grid.Column="0" Grid.Row="4" Style="{StaticResource Label_Text}" Text="Latitude:"/>
+            <Label Grid.Column="1" Grid.Row="4" Style="{StaticResource Label_Data}" Text="{Binding Latitude}"/>
+
+            <Label Grid.Column="0" Grid.Row="5" Style="{StaticResource Label_Text}" Text="Longitude:"/>
+            <Label Grid.Column="1" Grid.Row="5" Style="{StaticResource Label_Data}" Text="{Binding Longitude}"/>
+
+            <Label Grid.Column="0" Grid.Row="6" Style="{StaticResource Label_Text}" Text="Speed:"/>
+            <Label Grid.Column="1" Grid.Row="6" Style="{StaticResource Label_Data}" Text="{Binding Speed}"/>
+
+            <Label Grid.Column="0" Grid.Row="7" Style="{StaticResource Label_Text}" Text="Collision:"/>
+            <Label Grid.Column="1" Grid.Row="7" Style="{StaticResource Label_Data}" Text="{Binding Collision}"/>
+
+            <Label Grid.Column="0" Grid.Row="8" Style="{StaticResource Label_Text}" Text="Collision Type:"/>
+            <Label Grid.Column="1" Grid.Row="8" Style="{StaticResource Label_Data}" Text="{Binding Collision_Type}"/>
+
+            <Label Grid.Column="0" Grid.Row="9" Style="{StaticResource Label_Text}" Text="Collision With:"/>
+            <Label Grid.Column="1" Grid.Row="9" Style="{StaticResource Label_Data}" Text="{Binding Collision_With}"/>
+
+            <Label Grid.Column="0" Grid.Row="10" Style="{StaticResource Label_Text}" Text="Camera Detected:"/>
+            <Label Grid.Column="1" Grid.Row="10" Style="{StaticResource Label_Data}" Text="{Binding Camera_Detected}"/>
+
+            <Label Grid.Column="0" Grid.Row="11" Style="{StaticResource Label_Text}" Text="Camera Data:"/>
+            <Label Grid.Column="1" Grid.Row="11" Style="{StaticResource Label_Data}" Text="{Binding Camera_Data}"/>
+
+            <Label Grid.Column="0" Grid.Row="12" Style="{StaticResource Label_Text}" Text="UltraSonic Sensor:"/>
+            <Label Grid.Column="1" Grid.Row="12" Style="{StaticResource Label_Data}" Text="{Binding UltraSonic_Data}"/>
+
+            <Label Grid.Column="0" Grid.Row="13" Style="{StaticResource Label_Text}" Text="UltraSonic Range:"/>
+            <Label Grid.Column="1" Grid.Row="13" Style="{StaticResource Label_Data}" Text="{Binding UltraSonic_Range}"/>
+
+            <Label Grid.Column="0" Grid.Row="14" Style="{StaticResource Label_Text}" Text="Server Response:"/>
+            <Label Grid.Column="1" Grid.Row="14" Style="{StaticResource Label_Data}" Text="{Binding Server_Response_String}" FontSize="Small"/>
+
+        </Grid>
+    </ContentPage>
+
+    <ContentPage  Title="Car Dashboard">
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+
+            <Grid Grid.Row="0">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="Auto"/>
+                    <ColumnDefinition Width="Auto"/>
+                </Grid.ColumnDefinitions>
+                <Grid.Resources>
+                    <Style x:Key="Label_Text" TargetType="Label">
+                        <Setter Property="Padding" Value="0,0,0,0"/>
+                        <Setter Property="HorizontalTextAlignment" Value="End"/>
+                        <Setter Property="VerticalTextAlignment" Value="Center"/>
+                        <Setter Property="Margin" Value="0,0,0,0"/>
+                        <Setter Property="FontSize" Value="Medium"/>
+                    </Style>
+                    <Style x:Key="Label_Data" TargetType="Label">
+                        <Setter Property="Padding" Value="0,0,0,0"/>
+                        <Setter Property="HorizontalTextAlignment" Value="Start"/>
+                        <Setter Property="VerticalTextAlignment" Value="Center"/>
+                        <Setter Property="Margin" Value="0,0,0,0"/>
+                        <Setter Property="FontSize" Value="Medium"/>
+                    </Style>
+                </Grid.Resources>
+                <Label Grid.Row="0" Style="{StaticResource Label_Text}"  Text="Short Range: "/>
+                <Label Grid.Row="1" Style="{StaticResource Label_Text}"  Text="Distance (cm): "/>
+                <Label Grid.Row="2" Style="{StaticResource Label_Text}"  Text="Status: "/>
+
+                <Label Grid.Row="0" Style="{StaticResource Label_Data}" Grid.Column="1" Text="{Binding UltraSonic_Data}"/>
+                <Label Grid.Row="1" Style="{StaticResource Label_Data}" Grid.Column="1" Text="{Binding UltraSonic_Range}"/>
+                <Rectangle Grid.Row="2" Grid.Column="1" Fill="{Binding UltraSonic_Status}" WidthRequest="100"/>
+
+                <Label Grid.Row="3" Style="{StaticResource Label_Text}"  Text="Long Range: "/>
+                <Label Grid.Row="4" Style="{StaticResource Label_Text}"  Text="Distance (m): "/>
+                <Label Grid.Row="5" Style="{StaticResource Label_Text}"  Text="Status: "/>
+                
+                <Label Grid.Row="3" Style="{StaticResource Label_Data}" Grid.Column="1" Text="{Binding GPS_Data}"/>
+                <Label Grid.Row="4" Style="{StaticResource Label_Data}" Grid.Column="1" Text="{Binding GPS_Range}"/>
+                <Rectangle Grid.Row="5" Grid.Column="1" Fill="{Binding GPS_Status}"/>
+
+                <Label Grid.Row="6" Style="{StaticResource Label_Text}"  Text="Camera Detected: "/>
+                <Label Grid.Row="7" Style="{StaticResource Label_Text}"  Text="Camera Data: "/>
+                <Label Grid.Row="8" Style="{StaticResource Label_Text}"  Text="Camera Certainty: "/>
+                <Label Grid.Row="9" Style="{StaticResource Label_Text}"  Text="Camera Status: "/>
+                
+                <Label Grid.Row="6" Style="{StaticResource Label_Data}" Grid.Column="1" Text="{Binding Camera_Detected}"/>
+                <Label Grid.Row="7" Style="{StaticResource Label_Data}" Grid.Column="1" Text="{Binding Camera_Data}"/>
+                <Label Grid.Row="8" Style="{StaticResource Label_Data}" Grid.Column="1" Text="{Binding Camera_Certainty}"/>
+                <Rectangle Grid.Row="9" Grid.Column="1" Fill="{Binding Camera_Status}"/>
+
+            </Grid>
+            
+            <Grid Grid.Row="1">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                </Grid.RowDefinitions>
+                <Button Grid.Row="0" Text="Forward" Margin="10,10,10,10" Clicked="Forward_Clicked"/>
+
+                <StackLayout Grid.Row="1"  Orientation="Horizontal" HorizontalOptions="CenterAndExpand">
+                    <Button Text="Left" Margin="5,0,5,0" WidthRequest="100" Clicked="Left_Clicked"/>
+                    <Button Text="Stop" Margin="5,0,5,0" WidthRequest="135" Clicked="Stop_Clicked"/>
+                    <Button Text="Right" Margin="5,0,5,0" WidthRequest="100" Clicked="Right_Clicked"/>
+                </StackLayout>
+
+                <Button Grid.Row="2" Text="Backward" Margin="10,10,10,10" Clicked="Backward_Clicked"/>
+            </Grid>
+        </Grid>
+    </ContentPage>
+
+</TabbedPage>

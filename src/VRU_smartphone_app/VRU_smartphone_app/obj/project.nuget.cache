@@ -1,0 +1,18 @@
+{
+  "version": 2,
+  "dgSpecHash": "yjZGNG1twPOUwmG1YgvmBN1IsYftGEaW4HqMGEu2Gv7ua2IwiydUcdzNcVqhS+q18DP+/EhNm7uKkpVQJSrZbw==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\nirav\\Desktop\\Capstone\\VRU_smartphone_app\\VRU_smartphone_app\\VRU_smartphone_app.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\nirav\\.nuget\\packages\\microsoft.netcore.platforms\\1.1.0\\microsoft.netcore.platforms.1.1.0.nupkg.sha512",
+    "C:\\Users\\nirav\\.nuget\\packages\\netstandard.library\\2.0.3\\netstandard.library.2.0.3.nupkg.sha512",
+    "C:\\Users\\nirav\\.nuget\\packages\\newtonsoft.json\\13.0.1\\newtonsoft.json.13.0.1.nupkg.sha512",
+    "C:\\Users\\nirav\\.nuget\\packages\\plugin.mediamanager\\1.1.0\\plugin.mediamanager.1.1.0.nupkg.sha512",
+    "C:\\Users\\nirav\\.nuget\\packages\\plugin.mediamanager.forms\\1.1.0\\plugin.mediamanager.forms.1.1.0.nupkg.sha512",
+    "C:\\Users\\nirav\\.nuget\\packages\\system.numerics.vectors\\4.5.0\\system.numerics.vectors.4.5.0.nupkg.sha512",
+    "C:\\Users\\nirav\\.nuget\\packages\\xamarin.essentials\\1.7.1\\xamarin.essentials.1.7.1.nupkg.sha512",
+    "C:\\Users\\nirav\\.nuget\\packages\\xamarin.forms\\5.0.0.2337\\xamarin.forms.5.0.0.2337.nupkg.sha512",
+    "C:\\Users\\nirav\\.nuget\\packages\\xamarin.forms.maps\\5.0.0.2337\\xamarin.forms.maps.5.0.0.2337.nupkg.sha512"
+  ],
+  "logs": []
+}

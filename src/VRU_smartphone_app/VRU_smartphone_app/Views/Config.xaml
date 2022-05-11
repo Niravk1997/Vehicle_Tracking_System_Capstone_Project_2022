@@ -1,0 +1,50 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:vm="clr-namespace:VRU_smartphone_app.ViewModels"
+             x:Class="VRU_smartphone_app.Views.Config"
+             Title="User Config">
+    <ContentPage.BindingContext>
+        <vm:Config_ViewModel x:Name="Config_VM"/>
+    </ContentPage.BindingContext>
+
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="80"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="50"/>
+            <RowDefinition Height="50"/>
+            <RowDefinition Height="50"/>
+            <RowDefinition Height="50"/>
+            <RowDefinition Height="50"/>
+            <RowDefinition Height="50"/>
+            <RowDefinition Height="50"/>
+            <RowDefinition Height="80"/>
+        </Grid.RowDefinitions>
+
+        <Label Grid.Column="0" Grid.Row="0" Text="Server URL:" Margin="10,0,0,0" FontSize="Medium"/>
+        <Entry Grid.Column="1" Grid.Row="0" Text="{Binding Server_URL}" HorizontalOptions="FillAndExpand" Placeholder="Server IP address with port number." IsEnabled="{Binding isServer_not_Connected}"/>
+
+        <Label Grid.Column="0" Grid.Row="1" Text="ID:" Margin="10,0,0,0" FontSize="Medium"/>
+        <Entry Grid.Column="1" Grid.Row="1" Text="{Binding Server_ID}" HorizontalOptions="FillAndExpand" Placeholder="Must be an integer, between 0 and 2." IsEnabled="{Binding isServer_not_Connected}"/>
+
+        <Label Grid.Column="0" Grid.Row="2" Text="Name:" Margin="10,0,0,0" FontSize="Medium"/>
+        <Entry Grid.Column="1" Grid.Row="2" Text="{Binding VRU_Name}" HorizontalOptions="FillAndExpand" Placeholder="Enter your name." IsEnabled="{Binding isServer_not_Connected}"/>
+
+        <Label Grid.Column="0" Grid.Row="3" Text="Vehicle:" Margin="10,0,0,0" FontSize="Medium"/>
+        <Entry Grid.Column="1" Grid.Row="3" Text="{Binding VRU_Vehicle_Type}" HorizontalOptions="FillAndExpand" Placeholder="Enter vehicle type." IsEnabled="{Binding isServer_not_Connected}"/>
+
+        <Label Grid.Column="0" Grid.Row="4" Text="License Plate:" Margin="10,0,0,0" FontSize="Medium"/>
+        <Entry Grid.Column="1" Grid.Row="4" Text="{Binding VRU_Vehicle_License_Plate}" HorizontalOptions="FillAndExpand" Placeholder="Enter vehicle license plate number." IsEnabled="{Binding isServer_not_Connected}"/>
+
+        <Label Grid.Column="0" Grid.Row="5" Text="Server Status:" Margin="10,0,0,0" FontSize="Medium"/>
+        <Label Grid.Column="1" Grid.Row="5" Text="{Binding Server_Status}" Margin="10,0,0,0" FontSize="Medium"/>
+
+        <Button Grid.Column="0" Grid.ColumnSpan="2" Grid.Row="6" Text="Server Connect" Margin="10,0,10,0" Clicked="Server_Connect_Clicked" IsEnabled="{Binding isServer_not_Connected}"/>
+
+        <Label Grid.Column="0" Grid.ColumnSpan="2" Grid.Row="7" Text="{Binding Server_Response_Message}" Margin="10,0,0,0" FontSize="Small"/>
+    </Grid>
+    
+</ContentPage>

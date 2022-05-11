@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="VRU_smartphone_app.Views.Notifications_Page"
+             xmlns:vm="clr-namespace:VRU_smartphone_app.ViewModels"
+             Title="Notifications">
+    
+    <ContentPage.BindingContext>
+        <vm:Notifications_ViewModel x:Name="Notifications_VM"/>
+    </ContentPage.BindingContext>
+    
+</ContentPage>
